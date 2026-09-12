@@ -1,0 +1,9 @@
+{
+  "name": "software-design-depth-doctrine",
+  "description": "A design-review and design-authoring doctrine for fighting software complexity: deep modules, information hiding, error handling, naming, comments.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vitthal Mirji",
+    "url": "https://vitthalmirji.com"
+  }
+}
