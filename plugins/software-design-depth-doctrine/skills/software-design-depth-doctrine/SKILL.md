@@ -96,6 +96,32 @@ Full detail, examples, and code excerpts are split by theme - load only what's r
 - `references/trends-and-performance.md` - OOP/inheritance, agile, unit tests, TDD, design patterns, getters/setters, designing for performance.
 - `references/applying-in-typed-fp-codebases.md` - how a small set of these principles (design it twice, define errors out of existence, the design-patterns caution, clarity over cleverness, small general-purpose interfaces) show up concretely in typed/functional codebases (e.g. Scala). Load this only when reviewing or designing in such a codebase - it adds no new doctrine, only concrete translations.
 
+## Output format: tips & tricks
+
+Before defaulting to another paragraph of prose, consider escalating the output format - each
+step below tends to carry more information per unit of reader effort than the one before it:
+
+1. **Controlled-language prose** - for plain-text explanations, write (or ask for) ASD-STE100
+   style: short sentences, one idea per sentence, a restricted, unambiguous vocabulary. It was
+   built for aerospace maintenance manuals, but the constraints produce explanations that are
+   far more readable than typical free-form prose. The full spec is quite stringent - asking for
+   "80% of the way to ASD-STE100" is often the better trade-off.
+2. **Diagrams** - before writing another explanatory paragraph, ask whether a diagram (sequence,
+   state machine, call graph, architecture) would convey the same structure faster. Diagrams are
+   often easier to parse than the equivalent prose, especially for anything with more than two
+   moving parts or a nontrivial order of operations.
+3. **Interactive web pages** - for a comparison, a walkthrough, or a dashboard, consider asking
+   for output "in HTML" instead of a static document. An interactive page lets the reader explore
+   instead of forcing a single linear read.
+4. **Explainer videos** - for a genuinely complex topic, consider a fully custom, narrated
+   explainer video (e.g. "create a 3b1b-style video explainer on X"). This needs an API key for
+   narration (or a local-compute alternative) but is now realistic to ask for.
+
+The underlying shift: as LLMs absorb more of the legwork autonomously, more of the work rises
+into oversight and understanding rather than production - and because intelligence and code are
+increasingly abundant, it's worth asking for large, custom, *discardable* artifacts (a one-off web
+app, a one-off video) that would never have been worth building by hand.
+
 ## Acknowledgment
 
 This doctrine is a personal synthesis, not a transcription - it reflects weeks of deliberately practicing these mental models until they became instinct. Credit where due: the foundational framing (complexity as the root problem, deep modules, information hiding, defining errors out of existence) originates with John Ousterhout's *A Philosophy of Software Design*, referenced throughout as the intellectual source for the ideas being applied.
