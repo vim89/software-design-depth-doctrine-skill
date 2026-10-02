@@ -137,29 +137,29 @@ relevant to the current task:
 
 ## Output format: tips & tricks
 
-Before defaulting to another paragraph of prose, consider escalating the output format - each
-step below tends to carry more information per unit of reader effort than the one before it:
+A design-review verdict lands harder in the right format. Before writing another paragraph of
+justification, consider escalating:
 
-1. **Controlled-language prose** - for plain-text explanations, write (or ask for) ASD-STE100
-   style: short sentences, one idea per sentence, a restricted, unambiguous vocabulary. It was
-   built for aerospace maintenance manuals, but the constraints produce explanations that are
-   far more readable than typical free-form prose. The full spec is quite stringent - asking for
-   "80% of the way to ASD-STE100" is often the better trade-off.
-2. **Diagrams** - before writing another explanatory paragraph, ask whether a diagram (sequence,
-   state machine, call graph, architecture) would convey the same structure faster. Diagrams are
-   often easier to parse than the equivalent prose, especially for anything with more than two
-   moving parts or a nontrivial order of operations.
-3. **Interactive web pages** - for a comparison, a walkthrough, or a dashboard, consider asking
-   for output "in HTML" instead of a static document. An interactive page lets the reader explore
-   instead of forcing a single linear read.
-4. **Explainer videos** - for a genuinely complex topic, consider a fully custom, narrated
-   explainer video (e.g. "create a 3b1b-style video explainer on X"). This needs an API key for
-   narration (or a local-compute alternative) but is now realistic to ask for.
+1. **Controlled-language prose** - write the review comment itself in ASD-STE100-style short
+   sentences: one claim per sentence, no hedging. "This module is shallow: its interface is as
+   complex as its implementation" lands harder than a paragraph building up to the same point.
+   Aim for "80% of the way to ASD-STE100" if the full spec feels too clinical for your voice.
+2. **Diagrams** - a dependency diagram or a call graph makes a "this has too many dependencies"
+   or "this mixes zoom levels" argument visible in seconds, where the equivalent prose needs a
+   paragraph per edge. Ask for the call graph before writing the critique of it.
+3. **Interactive web pages** - when comparing two or three decomposition options for the same
+   module, an interactive HTML page (toggle between designs, highlight the dependency that
+   changes) makes the trade-off comparable at a glance instead of forcing a read-then-reread of
+   two static write-ups.
+4. **Explainer videos** - for walking a team through why a gnarly piece of legacy code needs
+   re-stratifying, a short narrated video over the before/after call graph often lands better
+   than an RFC nobody has time to read closely.
 
-The underlying shift: as LLMs absorb more of the legwork autonomously, more of the work rises
-into oversight and understanding rather than production - and because intelligence and code are
-increasingly abundant, it's worth asking for large, custom, *discardable* artifacts (a one-off web
-app, a one-off video) that would never have been worth building by hand.
+The underlying shift: as LLMs absorb more of the legwork autonomously, more of the design-review
+job rises into oversight and judgment rather than production - and because intelligence and code
+are increasingly abundant, it's worth asking for throwaway artifacts (a one-off comparison page,
+a one-off walkthrough video) that would never have been worth building by hand just to make one
+review's trade-off land.
 
 ## Acknowledgment
 
